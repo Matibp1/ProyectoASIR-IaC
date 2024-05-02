@@ -1,0 +1,65 @@
+body {
+    background-image: url('img/fondo.png');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace el menú horizontal */
+    justify-content: center; /* Centra los elementos del menú */
+}
+
+nav ul li {
+    margin: 0 20px; /* Mayor espaciado entre palabras del menú */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+    height: calc(100vh - 50px);
+    justify-content: center; /* Centra verticalmente los elementos */
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 3px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+}
+
+.styled-button {
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Espacio entre el h1 y el botón */
+}
+
+.styled-button:hover {
+    background-color: #45a049;
+}
