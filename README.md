@@ -21,7 +21,7 @@ Antes de empezar con todo si estas con una cuenta de estudiante y tiene el uso d
 ### Pasos
 1. Clona el repositorio en un directorio:
   
-   - git clone https://github.com/Matibp1/ProyectoASIR
+   - git clone https://github.com/Matibp1/ProyectoASIR-IaC
 
 2. Navega al directorio del proyecto:
 
