@@ -1,4 +1,5 @@
 # Fichero para definir variables
+
 # Amis aptas para la capa gratuita de AWS
 
 variable "ami_Amazon_Linux" {
@@ -23,7 +24,6 @@ variable "tipo_t2micro" {
   default = "t2.micro" 
 }
 #llaves disponibles
-
 variable "key_vockey" {
   type    = string
   default = "vockey" 
@@ -34,9 +34,15 @@ variable "zona_us_east_1" {
   type    = string
   default = "us-east-1"
 }
-
+#Credenciales
 variable "iam" {
   type = string
-  default = "arn:aws:iam::609902961712:role/LabRole"
-  
+  default = "arn:aws:iam::425164705412:role/LabRole"
+}
+
+#S3
+#Credenciales
+variable "S3" {
+  type = string
+  default = "micuboproyecto001"
 }

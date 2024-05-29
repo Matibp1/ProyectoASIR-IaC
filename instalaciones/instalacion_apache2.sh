@@ -131,7 +131,7 @@ main {
 h1 {
     text-align: center;
     font-size: 4rem;
-    color: #fff;
+    color: #000000;
     text-shadow: 0 0 3px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
 }
 
