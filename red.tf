@@ -10,6 +10,7 @@ resource "aws_vpc" "miRed" {
   tags = {
     Name = "miRed"  # Etiqueta para la VPC
   }
+
 }
 
 #  CIDR (Classless Inter-Domain Routing) es una notación utilizada para asignar 
@@ -18,6 +19,11 @@ resource "aws_vpc" "miRed" {
 # Gateway
 resource "aws_internet_gateway" "miPuerta" {
   vpc_id = aws_vpc.miRed.id  # ID de la VPC a la que se adjunta el Internet Gateway
+
+    #En pruebas
+    depends_on = [
+    aws_vpc.miRed
+  ]
 }
 
 
@@ -32,6 +38,12 @@ resource "aws_subnet" "miSubred" {
   tags = {
     Name = "miSubred"
   }
+
+    #En pruebas
+    depends_on = [
+    aws_vpc.miRed
+  ]
+
 }
 # miSubred2
 resource "aws_subnet" "miSubred2" {
@@ -43,16 +55,35 @@ resource "aws_subnet" "miSubred2" {
   tags = {
     Name = "miSubred2"
   }
+
+    #En pruebas
+    depends_on = [
+    aws_vpc.miRed
+  ]
+
 }
 
 # Asocia la subred al Internet Gateway mediante la tabla de rutas principal de la VPC
 resource "aws_route_table_association" "miAsociacion" {
   subnet_id      = aws_subnet.miSubred.id # ID de la subred a asociar
   route_table_id = aws_vpc.miRed.main_route_table_id # ID de la tabla de rutas principal de la VPC, ver abajo
+
+    #En pruebas
+    depends_on = [
+    aws_vpc.miRed
+  ]
+
 }
 # Define una ruta en la tabla de rutas principal de la VPC
 resource "aws_route" "miRuta" {
   route_table_id            = aws_vpc.miRed.main_route_table_id # ID de la tabla de rutas principal de la VPC
   destination_cidr_block    = "0.0.0.0/0"   # Bloque CIDR de destino (tráfico a cualquier lugar)
   gateway_id                = aws_internet_gateway.miPuerta.id # ID del Internet Gateway para enrutar el tráfico
+
+    #En pruebas
+    depends_on = [
+    aws_vpc.miRed
+  ]
+
+
 }
