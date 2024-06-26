@@ -1,13 +1,13 @@
-# Nombre del Proyecto
+# Infraestrucura como codigo (IaC) en aws
 
-Una breve descripción sobre lo que hace tu proyecto y cuál es su propósito.
+El objetivo de este proyecto es hacer el despliegue de una infraestructura mediante un código, recoger la información en los ficheros y lanzarla en AWS. Crear una infraestructura automatizada y escalable. Explorar las posibilidades que esta nos ofrece. Un producto que nos cree de rápidamente con un par de comandos una infraestructura en AWS. De esta manera una empresa de cualquier tamaño puede disponer de su infraestructura.
 
 ## Instalación
 
 ### Requisitos Previos
 - [Terraform](https://developer.hashicorp.com/terraform/install)
-- [AWS cuenta ]
-- [Visual Studio Code](#)
+- [AWS cuenta](https://aws.amazon.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Credenciales
 
@@ -18,10 +18,10 @@ Antes de empezar con todo si estas con una cuenta de estudiante y tiene el uso d
     - Copia el contenido del KEY, ACCESS y TOKEN que puedes encontrar cuando crear el laboratorio
 
 
-### Pasos
+### Pasos ⚙️
 1. Clona el repositorio en un directorio:
   
-   - git clone https://github.com/Matibp1/ProyectoASIR-IaC
+   - git clone https://github.com/Matibp1/ProyectoASIR
 
 2. Navega al directorio del proyecto:
 
@@ -44,7 +44,7 @@ Antes de empezar con todo si estas con una cuenta de estudiante y tiene el uso d
 
     ❗ EKS  (eks-cluster.tf)
 
-    Crear un cluster lleva su tiempo, te recomiendo ir a prepararte un taza de cafe cuando le des a crear
+    Crear un cluster lleva su tiempo, te recomiendo ir a prepararte un taza de cafe cuando le des a crear  
 
 ## Usos Varios 🚀
 
